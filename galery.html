@@ -1,327 +1,1295 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-	<meta name="generator" content="Astro v5.13.2">
-	<title>Album example · Bootstrap v5.3</title>
-	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
-	<script src="/docs/5.3/assets/js/color-modes.js"></script>
-	<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
-	<link rel="stylesheet" href="style.css">
-	<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-	<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-	<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-	<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-	<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-	<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-	<meta name="theme-color" content="#712cf9">
-	<style>
-		.bd-placeholder-img {
-			font-size: 1.125rem;
-			text-anchor: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			user-select: none
-		}
 
-		@media (min-width: 768px) {
-			.bd-placeholder-img-lg {
-				font-size: 3.5rem
-			}
-		}
+    <meta charset="UTF-8">
 
-		.b-example-divider {
-			width: 100%;
-			height: 3rem;
-			background-color: #0000001a;
-			border: solid rgba(0, 0, 0, .15);
-			border-width: 1px 0;
-			box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
-		}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		.b-example-vr {
-			flex-shrink: 0;
-			width: 1.5rem;
-			height: 100vh
-		}
+    <title>Examples of alternative therapies</title>
 
-		.bi {
-			vertical-align: -.125em;
-			fill: currentColor
-		}
 
-		.nav-scroller {
-			position: relative;
-			z-index: 2;
-			height: 2.75rem;
-			overflow-y: hidden
-		}
+    <!-- BOOTSTRAP -->
 
-		.nav-scroller .nav {
-			display: flex;
-			flex-wrap: nowrap;
-			padding-bottom: 1rem;
-			margin-top: -1px;
-			overflow-x: auto;
-			text-align: center;
-			white-space: nowrap;
-			-webkit-overflow-scrolling: touch
-		}
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
 
-		.btn-bd-primary {
-			--bd-violet-bg: #712cf9;
-			--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-			--bs-btn-font-weight: 600;
-			--bs-btn-color: var(--bs-white);
-			--bs-btn-bg: var(--bd-violet-bg);
-			--bs-btn-border-color: var(--bd-violet-bg);
-			--bs-btn-hover-color: var(--bs-white);
-			--bs-btn-hover-bg: #6528e0;
-			--bs-btn-hover-border-color: #6528e0;
-			--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-			--bs-btn-active-color: var(--bs-btn-hover-color);
-			--bs-btn-active-bg: #5a23c8;
-			--bs-btn-active-border-color: #5a23c8
-		}
 
-		.bd-mode-toggle {
-			z-index: 1500
-		}
+    <!-- SITE CSS -->
 
-		.bd-mode-toggle .bi {
-			width: 1em;
-			height: 1em
-		}
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="icon" type="image/jpg" href="sobreicon.jpg">
 
-		.bd-mode-toggle .dropdown-menu .active .bi {
-			display: block !important
-		}
-	</style>
 </head>
 
-<body> 
-	<header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+<body>
+
+
+    <!-- ========================================
+         NAVBAR
+    ======================================== -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Open menu"
+                >
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- NAVBAR LINKS -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index1.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre.html">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galeria</a>
-                        </li>
+
 
                         <li class="nav-item">
-                            <a class="nav-link" href="bibliografia.html">Referências  consultadas</a>
+
+                            <a
+                                class="nav-link"
+                                href="index2.html"
+                            >
+                                Home
+                            </a>
+
                         </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link" href="creditos.html">Creditos</a>
+
+                            <a
+                                class="nav-link"
+                                href="sobre2.html"
+                            >
+                                About
+                            </a>
+
                         </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link" href="formulario.html">Contato</a>
+
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="galery.html"
+                            >
+                                Therapies
+                            </a>
+
                         </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="biliografia2.html"
+                            >
+                                References
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Credits
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="orientadores2.html"
+                                    >
+                                        Advisors
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="creditos2.html"
+                                    >
+                                        Students
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="form.html"
+                            >
+                                Contact
+                            </a>
+
+                        </li>
+
+
                     </ul>
 
-                </div>
-            </div>
-        </nav>
-		<link rel="icon" type="image/jpg" href="icone.jpg">
-    </header>
-	<main>
-		<div class="album py-5 bg-body-tertiary">
-			<div class="container">
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-									fill="#eceeef" dy=".3em">Thumbnail</text>
-							</svg>
-							<div class="card-body">
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-						</div>
-					</div>
 
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer class="text-body-secondary py-5">
-		<div class="container">
-			<p class="float-end mb-1"> <a href="#">Back to top</a> </p>
-			<p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-			<p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-					href="/docs/5.3/getting-started/introduction">getting started guide</a>.</p>
-		</div>
-	</footer>
-	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-		class="astro-vvvwv3sm"></script>
-	<script src="script.js"></script>
+                    <div class="bandeiras">
+
+                        <a href="galeria.css">
+                            <img
+                                src="brasil.jpg"
+                                alt="Portuguese"
+                            >
+                        </a>
+
+                        <a href="galery.html">
+                            <img
+                                src="eua.jpg"
+                                alt="English"
+                            >
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            EXAMPLES OF ALTERNATIVE THERAPIES
+        </h1>
+
+
+        <!-- GREEN LINE -->
+
+        <hr>
+
+
+        <!-- ========================================
+             GALLERY
+        ======================================== -->
+
+        <div class="album py-5">
+
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+
+                    <!-- ========================================
+                         1. FLOWER ESSENCE THERAPY
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="florais.png"
+                                class="card-img-top"
+                                alt="Flower Essence Therapy"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Flower Essence Therapy
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Flower essence therapy uses essences prepared
+                                    from flowers and is mainly used to support
+                                    emotional balance and promote well-being.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Flower essence therapy is part of the
+                                    Integrative and Complementary Practices
+                                    offered by Brazil’s Unified Health System
+                                    (SUS). However, the available scientific
+                                    evidence has not consistently demonstrated
+                                    that flower essences are effective for
+                                    treating specific diseases.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    There is no universal minimum age.
+                                    Use by children, pregnant people, and
+                                    people taking medication should be
+                                    assessed individually. Flower essences
+                                    should not replace necessary healthcare
+                                    treatments.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    The essences are generally administered
+                                    as drops, according to the product and
+                                    the guidance received.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Professionals trained in the practice,
+                                    respecting the regulations of their
+                                    profession. Guidance should take into
+                                    account the safety of the person
+                                    receiving the product.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         2. REFLEXOLOGY
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="reflexologia.png"
+                                class="card-img-top"
+                                alt="Reflexology"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Reflexology
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Reflexology, also called reflexotherapy,
+                                    uses stimulation and massage on certain
+                                    areas of the body, especially the feet
+                                    and hands, aiming to promote relaxation
+                                    and well-being.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    There are studies on possible benefits
+                                    of reflexology, mainly related to
+                                    relaxation and the relief of some
+                                    symptoms. However, there is not enough
+                                    evidence that reflex points can treat
+                                    diseases in specific organs.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    It may be considered for different
+                                    age groups. People with injuries,
+                                    infections, changes in sensitivity,
+                                    or circulatory problems should receive
+                                    a prior assessment.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It is performed through pressure and
+                                    massage on specific points, mainly
+                                    on the feet and hands.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    A professional trained in reflexotherapy,
+                                    observing the limits of their professional
+                                    qualifications.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         3. YOGA
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="yoga.png"
+                                class="card-img-top"
+                                alt="Yoga"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Yoga
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    It is an ancient practice originating
+                                    in India that combines physical postures,
+                                    breathing exercises, and meditation,
+                                    seeking to integrate physical and
+                                    mental aspects.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Studies indicate that yoga may contribute
+                                    to well-being, stress management,
+                                    relaxation, sleep, and some aspects of
+                                    physical health. Its benefits may vary
+                                    depending on the person and the condition
+                                    studied.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    It can be practiced by children,
+                                    adolescents, adults, and older people,
+                                    with adaptations. People with physical
+                                    limitations or specific health conditions
+                                    should seek professional guidance before
+                                    performing more demanding postures.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It involves physical postures, breathing
+                                    exercises, relaxation, and meditation,
+                                    adapted to the participants’ needs.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Qualified yoga instructors or teachers.
+                                    When offered as healthcare, applicable
+                                    professional qualifications and
+                                    responsibilities must be respected.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         4. HYPNOTHERAPY
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="hipnoterapia.png"
+                                class="card-img-top"
+                                alt="Hypnotherapy"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Hypnotherapy
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Hypnotherapy uses hypnosis as a therapeutic
+                                    resource. The technique seeks to produce
+                                    a state of focused attention and relaxation
+                                    that can be used as part of certain
+                                    healthcare approaches.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Hypnosis has been studied in some areas
+                                    of healthcare and may help in certain
+                                    situations, such as pain management.
+                                    Results depend on the condition being
+                                    treated and how the technique is used.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    Use depends on the person’s age,
+                                    the purpose, and their individual
+                                    conditions. For children and
+                                    adolescents, appropriate assessment
+                                    and parental or guardian involvement
+                                    are required as applicable.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It uses concentration and focused-attention
+                                    techniques, generally accompanied by
+                                    therapeutic suggestions, according to
+                                    the purpose of the session.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    A licensed and trained professional
+                                    qualified to use hypnosis within the
+                                    limits of their profession and training.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         5. DOWSING
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="radiestesia.png"
+                                class="card-img-top"
+                                alt="Dowsing"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Dowsing
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Dowsing is a practice that uses objects
+                                    such as pendulums and rods to attempt
+                                    to identify supposed energies, vibrations,
+                                    or characteristics present in people,
+                                    objects, and environments.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    There is no robust scientific evidence
+                                    that dowsing can detect energies or
+                                    diagnose health problems. Instrument
+                                    movements may occur due to the ideomotor
+                                    effect, which is related to small
+                                    involuntary movements by the person
+                                    themselves.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    There is no proven medical indication
+                                    or established age group for treating
+                                    diseases with dowsing. It should not
+                                    be used to diagnose health problems
+                                    or replace a professional assessment.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    Practitioners use instruments such as
+                                    pendulums and rods to attempt to identify
+                                    supposed energies or characteristics
+                                    of environments and objects.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Dowsing practitioners. The practice is
+                                    not equivalent to a diagnosis performed
+                                    by a healthcare professional.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         6. BIOMAGNETISM
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="biomag.jpg"
+                                class="card-img-top"
+                                alt="Biomagnetism"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Biomagnetism
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Biomagnetism is a practice that uses
+                                    magnets placed on certain parts of
+                                    the body. Its practitioners claim that
+                                    magnets can help balance the body and
+                                    treat some health problems.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    There is no robust scientific evidence
+                                    demonstrating that biomagnetism can
+                                    balance the body’s pH or eliminate
+                                    microorganisms. The practice is also
+                                    not among the 29 Integrative and
+                                    Complementary Practices currently
+                                    offered by the SUS.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    There is no proven clinical indication
+                                    for treating diseases with biomagnetism.
+                                    Children, pregnant people, and people
+                                    with implanted medical devices should
+                                    exercise particular caution with magnets
+                                    and seek healthcare guidance.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    Practitioners place magnets on certain
+                                    areas of the body, claiming to seek
+                                    balance in the body. The claimed
+                                    therapeutic effects have not been proven.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Practitioners of the technique. This
+                                    does not replace care from qualified
+                                    healthcare professionals.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         7. ACUPUNCTURE
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="acun.jpg"
+                                class="card-img-top"
+                                alt="Acupuncture"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Acupuncture
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Acupuncture is a technique of Traditional
+                                    Chinese Medicine that uses very thin
+                                    needles inserted into specific points
+                                    on the body.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Acupuncture is one of the most studied
+                                    integrative practices and may help
+                                    mainly in the treatment of some types
+                                    of pain. Its effects vary depending on
+                                    the condition being treated. In Brazil,
+                                    it is part of the Integrative and
+                                    Complementary Practices offered by
+                                    the SUS.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    It may be indicated for adults,
+                                    older people, and, in specific situations,
+                                    children and adolescents. Use requires
+                                    individual assessment, especially for
+                                    people with blood-clotting disorders,
+                                    those taking anticoagulants, or those
+                                    with specific medical conditions.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    Thin, appropriate needles are inserted
+                                    into specific points on the body,
+                                    with strict hygiene and safety measures.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    A healthcare professional trained and
+                                    qualified to perform acupuncture,
+                                    according to the regulations applicable
+                                    to their profession.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         8. THETAHEALING
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="zeny.jpg"
+                                class="card-img-top"
+                                alt="ThetaHealing"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    ThetaHealing
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    ThetaHealing is a practice based on
+                                    meditation, visualization, and spiritual
+                                    beliefs. Its practitioners claim that
+                                    the technique can help change beliefs
+                                    and thoughts through access to the
+                                    so-called theta brain waves.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    There is not enough scientific evidence
+                                    to demonstrate that ThetaHealing can
+                                    “reprogram the subconscious” or produce
+                                    the therapeutic effects claimed by its
+                                    practitioners. The practice is not among
+                                    the 29 Integrative and Complementary
+                                    Practices of the SUS.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    There is no proven clinical indication
+                                    or established age group for treating
+                                    diseases with ThetaHealing. Children
+                                    and adolescents need appropriate
+                                    protection, and the practice should
+                                    not replace healthcare.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It generally involves meditation,
+                                    visualization, and reflection exercises
+                                    related to personal and spiritual beliefs.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Facilitators or practitioners trained
+                                    in the technique. This training, by
+                                    itself, is not equivalent to professional
+                                    healthcare qualifications.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         9. MUSIC THERAPY
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="idosopdf.jpg"
+                                class="card-img-top"
+                                alt="Music Therapy"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Music Therapy
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Music therapy uses music and elements
+                                    such as sound, rhythm, and melody
+                                    therapeutically. It can be used to
+                                    address physical, emotional, cognitive,
+                                    and social needs.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Studies indicate possible benefits of
+                                    music therapy in different situations,
+                                    including reduced anxiety and agitation
+                                    in some people with dementia, as well as
+                                    support for social interaction, emotions,
+                                    and well-being. Results vary depending
+                                    on the condition and intervention used.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    It can be used with children,
+                                    adolescents, adults, and older people,
+                                    according to each person’s needs.
+                                    The approach should be adapted to the
+                                    patient’s condition and ability to
+                                    participate.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It may involve listening to music,
+                                    singing, instruments, music creation,
+                                    and rhythmic activities, individually
+                                    or in groups.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    A music therapist with specific training
+                                    in the field. Practice should respect
+                                    the patient’s needs and professional
+                                    boundaries.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         10. HERBAL MEDICINE
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="planta.jpg"
+                                class="card-img-top"
+                                alt="Herbal Medicine"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Herbal Medicine
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Herbal medicine uses medicinal plants
+                                    and their derivatives to help prevent,
+                                    treat, or relieve certain health problems.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    Effectiveness and safety vary according
+                                    to the plant, the product, and its purpose.
+                                    Some plants have studied therapeutic uses,
+                                    but not all have proven effectiveness
+                                    and safety. Natural products can also
+                                    cause adverse effects and interact with
+                                    medications. Herbal medicine is part of
+                                    the Integrative and Complementary
+                                    Practices offered by the SUS.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    Use depends on the plant, the product,
+                                    and the purpose. Children, pregnant or
+                                    breastfeeding people, older people, and
+                                    people taking medication need professional
+                                    guidance because contraindications and
+                                    interactions may exist.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It uses medicinal plants and preparations
+                                    such as teas, extracts, and herbal
+                                    medicines, according to the product
+                                    and appropriate guidance.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Guidance may be provided by qualified
+                                    healthcare professionals according to
+                                    their professional responsibilities.
+                                    Prescribing and dispensing must follow
+                                    applicable regulations.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+                         11. AROMATHERAPY
+                    ======================================== -->
+
+                    <div class="col">
+
+                        <div class="card">
+
+                            <img
+                                src="aroma.jpg"
+                                class="card-img-top"
+                                alt="Aromatherapy"
+                            >
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Aromatherapy
+                                </h2>
+
+                                <p class="card-text">
+
+                                    <strong>Concept:</strong>
+
+                                    Aromatherapy uses essential oils extracted
+                                    from plants as a complementary resource,
+                                    generally through inhalation or other
+                                    forms of application, aiming to promote
+                                    well-being.
+
+                                </p>
+
+
+                                <p class="card-text evidencia">
+
+                                    <strong>Scientific evidence:</strong>
+
+                                    There are studies on the possible effects
+                                    of some essential oils in situations such
+                                    as stress, anxiety, pain, and sleep.
+                                    However, results vary depending on the
+                                    oil and the condition studied. Aromatherapy
+                                    should not replace medical treatments
+                                    when they are necessary.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>
+                                        Age restrictions / who can receive it:
+                                    </strong>
+
+                                    Use depends on the essential oil,
+                                    concentration, and method of application.
+                                    Children, pregnant or breastfeeding people,
+                                    and people with asthma, allergies, or
+                                    sensitivity to aromas require special care.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Application:</strong>
+
+                                    It may involve inhaling aromas or topical
+                                    use of properly prepared products.
+                                    Concentrated essential oils should not
+                                    be ingested or applied directly to the
+                                    skin without appropriate guidance.
+
+                                </p>
+
+
+                                <p class="card-text">
+
+                                    <strong>Who administers it:</strong>
+
+                                    Qualified professionals trained in
+                                    aromatherapy, respecting the regulations
+                                    of their profession and the precautions
+                                    necessary for the safe use of essential oils.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer class="py-5">
+
+        <div class="container">
+
+            <p class="mb-1">
+                ETEC FERRUCIO HUMBERTO GAZETTA 2026 –
+                © All rights reserved
+            </p>
+
+            <p class="mb-0">
+                Academic work for non-profit purposes
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+
+    <!-- YOUR JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>
