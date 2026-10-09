@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-/* ========================================
-   CORES DO SITE
-======================================== */
 
 :root {
     --verde: #10bb9e;
@@ -15,32 +11,7 @@
     --texto-secundario: #607277;
 }
 
-/* ========================================
-   CONFIGURAÇÕES GERAIS
-======================================== */
-
-body {
-    background-color: var(--fundo);
-    color: var(--texto);
-}
-
-@view-transition {
-  navigation: auto;
-}
-
-	::view-transition-old(root) {
-	  animation-duration: 0.5s;
-	}
-
-	/* Animação da página que está entrando */
-	::view-transition-new(root) {
-	  animation-duration: 0.5s;
-	}
-
-/* ========================================
-   NAVBAR
-======================================== */
-
+/* MENU (mesmas regras do estilo.css) */
 .navbar {
     background-color: var(--azul-escuro) !important;
     border-bottom: 3px solid var(--verde);
@@ -51,12 +22,12 @@ body {
     transition: 0.3s;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     color: var(--verde);
 }
 
 .navbar .nav-link.active {
-    color: var(--verde);
     font-weight: bold;
 }
 
@@ -68,7 +39,6 @@ body {
     filter: invert(1);
 }
 
-/* SUBMENU NO HOVER */
 .navbar .nav-item.dropdown .dropdown-menu {
     display: block;
     opacity: 0;
@@ -93,159 +63,493 @@ body {
     color: var(--verde);
 }
 
-/* ========================================
-   BANDEIRAS
-======================================== */
-
-.bandeiras {
+/* HERO */
+.hero {
+    position: relative;
+    min-height: calc(100vh - 60px);
+    min-height: calc(100svh - 60px);
     display: flex;
     align-items: center;
-    gap: 22px;
-    margin-left: 30px;
-}
-
-.bandeiras a {
-    display: block;
-}
-
-.bandeiras img {
-    width: 45px;
-    height: 30px;
-    object-fit: cover;
-    display: block;
-}
-
-/* ========================================
-   TÍTULOS DA PÁGINA
-======================================== */
-
-.titulo {
-    font-family: 'Archivo Black', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 50px;
-    color: var(--azul-escuro);
-}
-
-.titulo::after {
-    content: '';
-    display: block;
-    width: 100%;
-    max-width: 850px;
-    height: 5px;
-    background-color: var(--verde);
-    margin: 10px auto 0;
-    border-radius: 15px;
-}
-
-.subtitulo {
-    font-family: 'Archivo Black', sans-serif;
-    text-align: center;
-    font-size: 30px;
-    color: var(--azul-escuro);
-    margin-top: 35px;
-    margin-bottom: 30px;
-}
-
-/* ========================================
-   CARROSSEL
-======================================== */
-
-#carouselExampleCaptions {
-    border-radius: 8px;
+    color: var(--branco);
     overflow: hidden;
+    background-color: var(--azul-escuro);
 }
 
-/* ========================================
-   BORDAS REUTILIZÁVEIS
-======================================== */
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+}
 
-.borda {
-    border: 2px solid var(--verde) !important;
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--azul-escuro) 95%, transparent) 0%,
+        color-mix(in srgb, var(--azul-escuro) 75%, transparent) 40%,
+        transparent 75%);
+}
+#rodape{
+    text-align: center;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.hero-texto {
+    max-width: 700px;
+    animation: entrada 0.9s ease both;
+}
+
+.hero h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2rem, 7.5vw, 4.8rem);
+    font-weight: 400;
+    line-height: 1;
+    overflow-wrap: break-word;
+    margin: 0 0 24px;
+}
+
+.hero h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 6px;
+    background-color: var(--verde);
+    border-radius: 15px;
+    margin-top: 22px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 460px;
+    margin-bottom: 32px;
+}
+
+.btn-verde,
+.btn-contorno {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--verde);
+    transition: 0.3s;
+}
+
+.btn-verde {
+    background-color: var(--verde);
+    color: var(--azul-escuro);
+}
+
+.btn-verde:hover {
+    background-color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.btn-contorno {
+    color: var(--branco);
+    margin-left: 10px;
+}
+
+.btn-contorno:hover {
+    background-color: var(--verde);
+    color: var(--azul-escuro);
+}
+
+.btn-verde:focus-visible,
+.btn-contorno:focus-visible {
+    outline: 3px solid var(--branco);
+    outline-offset: 3px;
+}
+
+/* SEÇÕES IMAGEM + TEXTO */
+.secao {
+    padding: 80px 0;
+}
+
+.secao .imagem {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 2px solid var(--verde);
     border-radius: 8px;
 }
 
-/* ========================================
-   CARDS E PESSOAS (CRÉDITOS)
-======================================== */
-
-.credito {
-    margin-bottom: 35px;
-}
-
-.foto {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: var(--branco);
-    border: 5px solid var(--verde);
-    margin: 0 auto;
-}
-
-.credito h2 {
+.secao h2 {
+    font-family: 'Archivo Black', sans-serif;
     color: var(--azul-escuro);
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 18px;
 }
 
-.credito p {
-    color: var(--texto);
-    margin: 0 auto;
-    max-width: 280px;
-}
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-    text-align: center;
-    color: var(--texto-secundario);
-}
-
-footer p::before {
+.secao h2::after {
     content: '';
     display: block;
+    width: 80px;
+    height: 5px;
+    background-color: var(--verde);
+    border-radius: 15px;
+    margin-top: 14px;
+}
+
+.secao p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--texto);
+    max-width: 480px;
+}
+
+.secao-clara {
+    background-color: var(--cinza-claro);
+}
+
+/* FAIXA FINAL */
+.faixa {
+    /*background-color: var(--azul-escuro);
+    border-top: 3px solid var(--verde);
+    color: var(--branco);*/
+    text-align: center;
+    padding: 70px 0;
+}
+
+.faixa h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 26px;
+    color: var(--azul-escuro);
+}
+
+/* HR FINAL + RODAPÉ */
+.hr-final {
     width: 100%;
     max-width: 850px;
     height: 5px;
-    background-color: var(--verde);
-    margin: 0 auto 10px;
+    margin: 50px auto 0;
+    border: 0;
     border-radius: 15px;
+    background-color: var(--verde);
+    opacity: 1;
 }
 
-footer p {
+.rodape-inicio {
+    padding: 0 0 20px;
+}
+
+/* o hr já faz a linha, então some com a linha automática do estilo.css */
+.rodape-inicio p::before {
+    display: none;
+}
+
+.rodape-inicio p {
     padding-top: 20px;
 }
+.bandeiras {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-left: 30px;
+
+}
+
+
+.bandeiras a {
+
+    display: block;
+
+}
+
+
+.bandeiras img {
+
+    width: 45px;
+
+    height: 30px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+/* ANIMAÇÃO (só no hero) */
+@keyframes entrada {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-texto { animation: none; }
+}
+
+@media (max-width: 768px) {
+    .hero::before {
+        background: linear-gradient(180deg,
+            color-mix(in srgb, var(--azul-escuro) 90%, transparent) 0%,
+            color-mix(in srgb, var(--azul-escuro) 60%, transparent) 100%);
+    }
+
+    .btn-contorno {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+    .secao {
+        padding: 50px 0;
+    }
+}
+
+
+/* ========================================
+   ANIMAÇÕES AO ROLAR A PÁGINA (somente CSS)
+   Só rodam em navegadores que suportam e
+   para quem não pediu menos movimento.
+======================================== */
+
+@supports (animation-timeline: view()) {
+@media (prefers-reduced-motion: no-preference) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .secao {
+        overflow-x: clip;
+    }
+
+    /* --- Barra de progresso verde no topo --- */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: var(--verde);
+        transform-origin: left;
+        z-index: 2000;
+        animation: progresso linear both;
+        animation-timeline: scroll(root);
+    }
+
+    /* --- Hero: a foto "desce" mais devagar (parallax) e o texto some --- */
+    .hero-img {
+        animation: parallax linear both;
+        animation-timeline: view();
+        animation-range: exit 0% exit 100%;
+    }
+
+    .hero .container {
+        animation: some-subindo linear both;
+        animation-timeline: view();
+        animation-range: exit 0% exit 100%;
+    }
+
+    /* --- Seções: foto se revela como uma cortina --- */
+    .secao .imagem {
+        animation: cortina-esq linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    .secao-clara .imagem {
+        animation-name: cortina-dir;
+    }
+
+    /* --- Seções: texto entra do lado oposto --- */
+    .secao .row > div:last-child {
+        animation: entra-dir linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 45%;
+    }
+
+    .secao-clara .row > div:last-child {
+        animation-name: entra-esq;
+    }
+
+    /* --- Linha verde do título "se desenha" --- */
+    .secao h2::after {
+        transform-origin: left;
+        animation: desenha linear both;
+        animation-timeline: view();
+        animation-range: entry 30% cover 50%;
+    }
+
+    /* --- Faixa final --- */
+    .faixa h2 {
+        animation: zoom-entra linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 28%;
+    }
+
+    .faixa .btn-verde {
+        animation: sobe linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 32%;
+    }
+
+    /* --- hr final cresce do centro --- */
+    .hr-final {
+        animation: desenha linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+        transform-origin: center;
+    }
+
+    /* --- Rodapé aparece --- */
+    .rodape-inicio p {
+        animation: surge linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+    }
+
+    /* ---------- KEYFRAMES ---------- */
+    @keyframes progresso {
+        from { transform: scaleX(0); }
+        to   { transform: scaleX(1); }
+    }
+
+    @keyframes parallax {
+        from { transform: translateY(0) scale(1); }
+        to   { transform: translateY(18%) scale(1.12); }
+    }
+
+    @keyframes some-subindo {
+        from { opacity: 1; transform: translateY(0); }
+        to   { opacity: 0; transform: translateY(-70px); }
+    }
+
+    @keyframes cortina-esq {
+        from { clip-path: inset(0 100% 0 0); transform: scale(1.08); }
+        to   { clip-path: inset(0 0 0 0);    transform: scale(1); }
+    }
+
+    @keyframes cortina-dir {
+        from { clip-path: inset(0 0 0 100%); transform: scale(1.08); }
+        to   { clip-path: inset(0 0 0 0);    transform: scale(1); }
+    }
+
+    @keyframes entra-dir {
+        from { opacity: 0; transform: translateX(60px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes entra-esq {
+        from { opacity: 0; transform: translateX(-60px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes desenha {
+        from { transform: scaleX(0); }
+        to   { transform: scaleX(1); }
+    }
+
+    @keyframes zoom-entra {
+        from { opacity: 0; transform: scale(0.85); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes sobe {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes surge {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+}
+}
+
 
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
 
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 40px;
-    }
+/* Bandeiras ao lado do botão do menu */
+.navbar .bandeiras {
+    margin-left: auto;
+    gap: 12px;
+}
 
-    .subtitulo {
-        font-size: 26px;
+.navbar .bandeiras a {
+    margin: 0 !important;
+}
+
+@media (min-width: 992px) {
+    .navbar .bandeiras {
+        gap: 22px;
+        margin-left: 30px;
     }
 }
 
-@media (max-width: 576px) {
-    .titulo {
-        font-size: 32px;
+@media (max-width: 991.98px) {
+    .navbar .bandeiras img {
+        width: 36px;
+        height: 24px;
     }
 
-    .subtitulo {
-        font-size: 23px;
+    /* Submenu "Créditos" dentro do menu aberto: abre ao tocar, sem ocupar espaço escondido */
+    .navbar .nav-item.dropdown .dropdown-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        margin-bottom: 8px;
     }
 
-    .foto {
-        width: 120px;
-        height: 120px;
+    .navbar .nav-item.dropdown .dropdown-menu.show {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .btn-verde,
+    .btn-contorno {
+        display: block;
+        text-align: center;
+        margin: 0 0 12px;
+    }
+
+    .secao {
+        padding: 40px 0;
+    }
+
+    .secao p {
+        font-size: 1rem;
+    }
+
+    .faixa {
+        padding: 50px 0;
+    }
+
+    .hr-final {
+        margin-top: 35px;
     }
 }

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-
 /* ========================================
    CORES DO SITE
 ======================================== */
@@ -8,20 +7,13 @@
 :root {
     --verde: #10bb9e;
     --verde-escuro: #087f73;
-
     --azul-escuro: #173f4a;
-
     --fundo: #f4faf9;
-
     --cinza-claro: #e8f0ef;
-
     --branco: #ffffff;
-
     --texto: #212529;
-
     --texto-secundario: #607277;
 }
-
 
 /* ========================================
    CONFIGURAÇÕES GERAIS
@@ -32,6 +24,9 @@ body {
     color: var(--texto);
 }
 
+main {
+    overflow-x: clip;
+}
 
 /* ========================================
    NAVBAR
@@ -64,11 +59,7 @@ body {
     filter: invert(1);
 }
 
-
-/* ========================================
-   SUBMENU NO HOVER
-======================================== */
-
+/* SUBMENU NO HOVER */
 .navbar .nav-item.dropdown .dropdown-menu {
     display: block;
     opacity: 0;
@@ -93,6 +84,39 @@ body {
     color: var(--verde);
 }
 
+/* ========================================
+   BANDEIRAS (ao lado do botão do menu)
+======================================== */
+
+.bandeiras {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.bandeiras a {
+    display: block;
+    margin: 0;
+}
+
+.bandeiras img {
+    width: 36px;
+    height: 24px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .bandeiras {
+        gap: 22px;
+    }
+
+    .bandeiras img {
+        width: 45px;
+        height: 30px;
+    }
+}
 
 /* ========================================
    TÍTULO DA PÁGINA
@@ -100,68 +124,27 @@ body {
 
 main > h1 {
     font-family: 'Archivo Black', sans-serif;
-
     font-weight: bold;
-
     text-align: center;
-
     margin-top: 40px;
-
     margin-bottom: 20px;
-
     padding: 0 20px;
-
-    font-size: 50px;
-
+    font-size: clamp(1.5rem, 6vw, 3.125rem);
+    overflow-wrap: break-word;
     color: var(--azul-escuro);
 }
 
-
-/* ========================================
-   BANDEIRAS
-======================================== */
-
-.bandeiras {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-left: 30px;
-}
-
-.bandeiras a {
-    display: block;
-}
-
-.bandeiras img {
-    width: 45px;
-    height: 30px;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* ========================================
-   LINHA ABAIXO DO TÍTULO
-======================================== */
-
+/* LINHA ABAIXO DO TÍTULO */
 main > hr {
     width: 100%;
-
     max-width: 850px;
-
     height: 5px;
-
     border: none;
-
     background-color: var(--verde);
-
     margin: 0 auto 30px;
-
     border-radius: 15px;
-
     opacity: 1;
 }
-
 
 /* ========================================
    ÁREA DA GALERIA
@@ -175,110 +158,64 @@ main > hr {
     padding-top: 10px;
 }
 
-
 /* ========================================
    CARDS
 ======================================== */
 
 .card {
     height: 100%;
-
     background-color: var(--branco);
-
     border: 2px solid var(--verde);
-
     border-radius: 8px;
-
     overflow: hidden;
-
     box-shadow: none !important;
-
-    transition: 0.3s;
-
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
-
     flex-direction: column;
 }
-
-
-/* ========================================
-   EFEITO DOS CARDS
-======================================== */
 
 .card:hover {
     transform: translateY(-5px);
-
-    box-shadow: 0 6px 15px rgba(23, 63, 74, 0.15) !important;
+    box-shadow: 0 6px 15px color-mix(in srgb, var(--azul-escuro) 15%, transparent) !important;
 }
-
-
-/* ========================================
-   IMAGEM DOS CARDS
-======================================== */
 
 .card-img-top {
     width: 100%;
-
-    height: 225px;
-
-    object-fit: cover;
-
+    height: 240px;
+    object-fit: contain;
+    background-color: var(--cinza-claro);
+}
+.card-img-topp {
+    width: 100%;
+    height: 240px;
     background-color: var(--cinza-claro);
 }
 
-
-/* ========================================
-   CORPO DOS CARDS
-======================================== */
-
 .card-body {
     padding: 25px;
-
     background-color: var(--branco);
-
     display: flex;
-
     flex-direction: column;
-
     flex-grow: 1;
 }
 
-
-/* ========================================
-   TÍTULO DOS CARDS
-======================================== */
-
 .card-title {
     font-family: 'Archivo Black', sans-serif;
-
+    font-weight: 400;
     color: var(--azul-escuro);
-
     font-size: 22px;
-
     margin-bottom: 18px;
+    overflow-wrap: break-word;
 }
-
-
-/* ========================================
-   SUBTÍTULOS
-======================================== */
 
 .card-body strong {
     color: var(--verde-escuro);
-
     font-weight: bold;
 }
 
-
-/* ========================================
-   TEXTO DOS CARDS
-======================================== */
-
 .card-text {
     color: var(--texto);
-
     line-height: 1.6;
-
     margin-bottom: 14px;
 }
 
@@ -286,19 +223,11 @@ main > hr {
     margin-bottom: 0;
 }
 
-
-/* ========================================
-   DESTAQUE DA EVIDÊNCIA CIENTÍFICA
-======================================== */
-
 .evidencia {
     margin-top: 5px;
-
     padding-top: 15px;
-
     border-top: 1px solid var(--cinza-claro);
 }
-
 
 /* ========================================
    FOOTER
@@ -306,43 +235,23 @@ main > hr {
 
 footer {
     text-align: center;
-
     color: var(--texto-secundario);
 }
 
-
-/* ========================================
-   LINHA VERDE ACIMA DO FOOTER
-======================================== */
-
 footer .container::before {
     content: '';
-
     display: block;
-
     width: 100%;
-
     max-width: 850px;
-
     height: 5px;
-
     background-color: var(--verde);
-
     margin: 0 auto 20px;
-
     border-radius: 15px;
 }
 
-
-/* ========================================
-   LINKS DO FOOTER
-======================================== */
-
 footer a {
     color: var(--verde-escuro);
-
     text-decoration: none;
-
     transition: 0.3s;
 }
 
@@ -350,60 +259,57 @@ footer a:hover {
     color: var(--verde);
 }
 
-
-/* ========================================
-   CENTRALIZA OS 2 ÚLTIMOS CARDS
-======================================== */
-
-@media (min-width: 768px) {
-
-    .album .row .ultimo-card {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-
-    .album .row .ultimo-card:nth-last-child(2) {
-        margin-left: 16.666666%;
-    }
-
+/* Botão "voltar ao topo" */
+.topo {
+    text-align: right;
+    margin-bottom: 10px;
 }
 
+.topo img {
+    width: clamp(32px, 4vw, 48px);
+    height: auto;
+}
 
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
 
-    main > h1 {
-        font-size: 40px;
+    /* Submenu "Créditos" dentro do menu aberto: abre ao tocar */
+    .navbar .nav-item.dropdown .dropdown-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        margin-bottom: 8px;
     }
 
-    .card-img-top {
-        height: 220px;
+    .navbar .nav-item.dropdown .dropdown-menu.show {
+        display: block;
     }
-
 }
 
-
-/* ========================================
-   CELULARES
-======================================== */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 230px;
+    }
+}
 
 @media (max-width: 576px) {
-
     main > h1 {
-        font-size: 32px;
-
         margin-top: 30px;
-
         margin-bottom: 15px;
     }
 
     main > hr {
         height: 4px;
-
         margin-bottom: 20px;
+    }
+
+    .album {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
     }
 
     .card-body {
@@ -411,11 +317,97 @@ footer a:hover {
     }
 
     .card-img-top {
-        height: 200px;
+        height: 220px;
     }
 
     .card-title {
         font-size: 20px;
     }
+}
 
+/* ========================================
+   ANIMAÇÕES
+   (só para quem não pediu menos movimento)
+======================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* --- Ao abrir a página --- */
+    main > h1 {
+        animation: desce 0.8s ease both;
+    }
+
+    main > hr {
+        animation: desenha 0.9s 0.4s ease both;
+    }
+
+    @keyframes desce {
+        from { opacity: 0; transform: translateY(-30px); }
+        to   { opacity: 1; transform: none; }
+    }
+
+    @keyframes desenha {
+        from { transform: scaleX(0); }
+        to   { transform: scaleX(1); }
+    }
+
+    /* --- Ao rolar (Chrome, Edge, Safari recente) --- */
+    @supports (animation-timeline: view()) {
+
+        /* Barra de progresso no topo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--verde);
+            transform-origin: left;
+            z-index: 2000;
+            animation: desenha linear both;
+            animation-timeline: scroll(root);
+        }
+
+        /* Cada card sobe e "assenta". Usa "backwards" para o efeito
+           de passar o mouse (hover) continuar funcionando depois. */
+        .album .col > .card {
+            animation: card-entra linear backwards;
+            animation-timeline: view();
+            animation-range: entry 0% entry 45%;
+        }
+
+        /* A foto de cada card dá um zoom suave ao aparecer */
+        .card-img-top {
+            animation: foto-zoom linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+        }
+
+        /* Rodapé */
+        footer .container {
+            animation: surge linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+        }
+
+        @keyframes card-entra {
+            from { opacity: 0; transform: translateY(80px) scale(0.94); }
+            to   { opacity: 1; transform: none; }
+        }
+
+        @keyframes foto-zoom {
+            from { transform: scale(1.25); }
+            to   { transform: scale(1); }
+        }
+
+        @keyframes surge {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    }
 }

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Título alterado conforme solicitação -->
     <title>Terapias como Forma de Cuidado</title>
 
     <link
@@ -15,9 +14,13 @@
         crossorigin="anonymous"
     >
 
+    <!-- FONTE DOS TÍTULOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="sore2.css">
-    <!-- Ícone de página removido -->
-     <link rel="icon" type="image/jpg" href="iconete.jpg">
+    <link rel="icon" type="image/jpg" href="iconete.jpg">
 </head>
 
 <body>
@@ -40,90 +43,76 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- BANDEIRAS (sempre visíveis, ao lado do botão do menu) -->
+                <div class="bandeiras ms-auto order-lg-last d-flex align-items-center">
+                    <a href="sobre.html">
+                        <img src="brasil.jpg" alt="Português">
+                    </a>
+
+                    <a href="sobre2.html">
+                        <img src="eua.jpg" alt="English">
+                    </a>
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                Home
-                            </a>
+                            <a class="nav-link" href="index.html">Início</a>
                         </li>
 
                         <li class="nav-item">
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="sobre.html"
-                            >
-                                Sobre
-                            </a>
+                            <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">
-                                Terapias
-                            </a>
+                            <a class="nav-link" href="galeria.html">Terapias</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="bibliografia.html">
-                               Bibliografia
-                            </a>
+                            <a class="nav-link" href="bibliografia.html">Bibliografia</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Créditos</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="orientadores.html">orientadores</a></li>
-                                <li><a class="dropdown-item" href="creditos1.html">alunos</a></li>
+                                <li><a class="dropdown-item" href="orientadores.html">Orientadores</a></li>
+                                <li><a class="dropdown-item" href="creditos1.html">Desenvolvedores</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="formulario.html">
-                                Contato
-                            </a>
+                            <a class="nav-link" href="formulario.html">Contato</a>
                         </li>
 
                     </ul>
-                    <div class="bandeiras">
 
-                        <a href="sobre.html">
-                            <img src="brasil.jpg" alt="Português">
-                        </a>
-
-                        <a href="sobre2.html">
-                            <img src="eua.jpg" alt="English">
-                        </a>
-
-                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    
+
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        
+
         <div class="container py-4">
 
             <h1 class="titulo">
                 SOBRE
             </h1>
-            
 
             <!-- JUMBOTRON -->
-            <div class="p-5 mb-4 rounded-3 borda jumbotron">
+            <div class="rounded-3 mb-5 borda jumbotron">
 
-                <div class="container-fluid py-5">
+                <div class="jumbotron-texto">
 
                     <h1 class="display-5 fw-bold">
                         Terapias como forma de cuidado
                     </h1>
 
-                    <p class="col-md-8 fs-4">
+                    <p class="fs-4">
                         Elas integram práticas focadas no bem-estar físico, mental e emocional. Por meio de técnicas de relaxamento, equilíbrio energético e práticas corporais, promovem a prevenção da saúde e o fortalecimento da qualidade de vida.
                     </p>
 
@@ -138,11 +127,9 @@
                 <!-- CARD ESCURO -->
                 <div class="col-md-6">
 
-                    <div class="h-100 p-5 rounded-3 borda card-escuro">
+                    <div class="h-100 rounded-3 borda card-escuro">
 
-                        <h2>
-                            Corpo, Mente e Equilíbrio
-                        </h2>
+                        <h2>Corpo, Mente e Equilíbrio</h2>
 
                         <p>
                             Integrando saúde física e mental, essas metodologias estimulam o autocuidado diário e o alívio das tensões, auxiliando na busca por hábitos mais saudáveis e conscientes.
@@ -156,11 +143,9 @@
                 <!-- CARD CLARO -->
                 <div class="col-md-6">
 
-                    <div class="h-100 p-5 rounded-3 borda card-claro">
+                    <div class="h-100 rounded-3 borda card-claro">
 
-                        <h2>
-                            Diversidade de Práticas
-                        </h2>
+                        <h2>Diversidade de Práticas</h2>
 
                         <p>
                             Aromaterapia, meditação, yoga, acupuntura, massoterapia e reiki são algumas das abordagens utilizadas para harmonizar o corpo e proporcionar mais vitalidade ao dia a dia.
@@ -171,18 +156,23 @@
                 </div>
 
             </div>
-
+            
 
             <!-- FOOTER -->
-            <footer class="pt-3 mt-4">
-
+            <footer class="pt-3 mt-5">
+                <div align="right">
+                <a href="#">
+                    <img src="output-onlinepngtools.png" width="3%">
+                </a>
+            </div>
                 <p>
+                    
                     ETEC FERRUCIO HUMBERTO GAZETTA 2026 –
                     © Todos os direitos reservados
                     <br>
                     Trabalho acadêmico sem fins lucrativos
                 </p>
-
+                
             </footer>
 
         </div>
