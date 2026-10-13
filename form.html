@@ -126,7 +126,13 @@
 
             <div class="formulario">
 
-                <form>
+                <!-- Adicionado um ID no formulário para facilitar a manipulação pelo JavaScript -->
+                <form id="contactForm">
+
+                    <!-- Elemento onde vai aparecer a mensagem de sucesso -->
+                    <div id="mensagemSucesso" class="alert alert-success d-none" role="alert">
+                        Your feedback has been successfully received, thank you for watching :)
+                    </div>
 
                     <div class="mb-3">
 
@@ -286,6 +292,25 @@
                 campo.setCustomValidity("");
             });
 
+        });
+
+        // Código adicionado para lidar com o envio do formulário e exibir a mensagem
+        const form = document.getElementById("contactForm");
+        const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio real e o recarregamento da página
+
+            // Exibe a mensagem removendo a classe do Bootstrap 'd-none' (que oculta o elemento)
+            mensagemSucesso.classList.remove("d-none");
+
+            // Limpa o formulário
+            form.reset();
+
+            // Oculta a mensagem automaticamente depois de 5 segundos (opcional)
+            setTimeout(function () {
+                mensagemSucesso.classList.add("d-none");
+            }, 5000);
         });
     </script>
 

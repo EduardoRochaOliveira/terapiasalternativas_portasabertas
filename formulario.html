@@ -99,7 +99,12 @@
 
             <div class="formulario">
 
-                <form>
+                <form id="contactForm">
+
+                    <!-- Mensagem de sucesso em português com o <3 -->
+                    <div id="mensagemSucesso" class="alert alert-success d-none" role="alert">
+                        Sua avaliação foi recebida com sucesso, obrigado por avaliar :)
+                    </div>
 
                     <div class="mb-3">
 
@@ -218,7 +223,7 @@
             </div>
 
 
-           
+            
 
         </div>
 
@@ -237,6 +242,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script>
+        // Validação personalizada dos campos
+        document.querySelectorAll("input, select, textarea").forEach(function (campo) {
+
+            campo.addEventListener("invalid", function () {
+
+                if (campo.validity.valueMissing) {
+                    campo.setCustomValidity("Por favor, preencha este campo.");
+                } 
+                else if (campo.validity.typeMismatch) {
+                    campo.setCustomValidity("Por favor, insira um endereço de e-mail válido.");
+                } 
+                else if (campo.validity.patternMismatch) {
+                    campo.setCustomValidity(campo.title || "Por favor, insira um valor válido.");
+                } 
+                else if (campo.validity.tooShort) {
+                    campo.setCustomValidity("Por favor, insira pelo menos " + campo.minLength + " caracteres.");
+                } 
+                else {
+                    campo.setCustomValidity("Por favor, insira um valor válido.");
+                }
+
+            });
+
+            campo.addEventListener("input", function () {
+                campo.setCustomValidity("");
+            });
+
+        });
+
+        // Manipulação do envio do formulário
+        const form = document.getElementById("contactForm");
+        const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o recarregamento da página
+
+            mensagemSucesso.classList.remove("d-none"); // Mostra a mensagem
+            form.reset(); // Limpa os campos
+
+            // Oculta a mensagem automaticamente após 5 segundos
+            setTimeout(function () {
+                mensagemSucesso.classList.add("d-none");
+            }, 5000);
+        });
+    </script>
 
 </body>
 
