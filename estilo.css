@@ -176,6 +176,7 @@
 /* SEÇÕES IMAGEM + TEXTO */
 .secao {
     padding: 80px 0;
+    overflow-x: clip;
 }
 
 .secao .imagem {

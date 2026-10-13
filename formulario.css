@@ -244,3 +244,20 @@ footer p {
     }
 
 }
+
+
+/* BOTÕES NO CELULAR: um embaixo do outro, largura total */
+@media (max-width: 576px) {
+
+    .botao {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .botao .btn,
+    .btn-limpar {
+        width: 100%;
+        margin-left: 0;
+    }
+}

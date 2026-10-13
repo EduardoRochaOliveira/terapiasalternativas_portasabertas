@@ -1,0 +1,114 @@
+/* ==========================================================
+   RESPONSIVIDADE COMPARTILHADA
+   Carregado por último em todas as páginas (PT e EN).
+   ========================================================== */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- Bandeiras ao lado do botão do menu ---------- */
+.navbar .bandeiras {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 0 auto;
+}
+
+.navbar .bandeiras a {
+    display: block;
+    margin: 0 !important;
+}
+
+.navbar .bandeiras img {
+    display: block;
+    width: 36px;
+    height: 24px;
+    object-fit: cover;
+}
+
+@media (min-width: 992px) {
+    .navbar .bandeiras {
+        gap: 22px;
+        margin-left: 30px;
+    }
+
+    .navbar .bandeiras img {
+        width: 45px;
+        height: 30px;
+    }
+}
+
+/* ---------- Submenu "Créditos" ---------- */
+/* Abre também ao clicar/tocar e pelo teclado (antes só abria com o mouse) */
+.navbar .nav-item.dropdown .dropdown-menu.show,
+.navbar .nav-item.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .nav-item.dropdown .dropdown-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        margin-bottom: 8px;
+    }
+
+    .navbar .nav-item.dropdown .dropdown-menu.show {
+        display: block;
+    }
+
+    /* áreas de toque confortáveis no celular */
+    .navbar-nav .nav-link,
+    .navbar .dropdown-menu .dropdown-item {
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
+    }
+}
+
+/* ---------- Títulos ---------- */
+.titulo {
+    font-size: clamp(1.5rem, 6vw, 3.125rem);
+    overflow-wrap: break-word;
+    padding: 0 0.5rem;
+}
+
+/* espaços que antes eram feitos com <br><br><br> */
+.titulo + .row {
+    margin-top: 2.5rem;
+}
+
+.titulo + .row.text-center {
+    margin-bottom: 4rem;
+}
+
+/* ---------- Botão "voltar ao topo" ---------- */
+.topo {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.topo img {
+    width: clamp(32px, 4vw, 48px);
+    height: auto;
+}
+
+/* ---------- Rodapé ---------- */
+footer p {
+    overflow-wrap: break-word;
+}
+
+/* ---------- Telas muito pequenas (até 360px) ---------- */
+@media (max-width: 360px) {
+    .navbar .bandeiras img {
+        width: 32px;
+        height: 22px;
+    }
+}
